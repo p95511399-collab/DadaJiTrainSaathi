@@ -24,7 +24,7 @@ import kotlin.concurrent.thread
 class MainActivity : Activity(), TextToSpeech.OnInitListener {
     private val saved = listOf("15204", "15032", "15203", "15031")
     // Replace after deploying the backend on Render. Keep the trailing /
-    private val backend = "https://YOUR-RENDER-SERVICE.onrender.com"
+    private val backend = "https://dadajitrainsaathi-1.onrender.com"
     private lateinit var result: TextView
     private lateinit var input: EditText
     private lateinit var tts: TextToSpeech
