@@ -44,7 +44,7 @@ class MainActivity : Activity(), TextToSpeech.OnInitListener {
             root.addView(Button(this).apply { text = "ट्रेन $number कहाँ है?"; textSize = 18f; setOnClickListener { fetchLive(number) } }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 58).apply { bottomMargin = 8 })
         }
         root.addView(TextView(this).apply { text = "या ट्रेन का नाम / नंबर बोलें"; textSize = 19f; setPadding(0, 22, 0, 8) })
-        input = EditText(this).apply { hint = "ट्रेन नंबर या नाम लिखें"; textSize = 18f; singleLine = true }
+        input = EditText(this).apply { hint = "ट्रेन नंबर या नाम लिखें"; textSize = 18f; isSingleLine = true }
         root.addView(input)
         root.addView(Button(this).apply { text = "🎙️ बोलकर पूछें"; textSize = 19f; setOnClickListener { startVoice() } }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 58))
         root.addView(Button(this).apply { text = "खोजें"; setOnClickListener { resolveQuery(input.text.toString()) } }, LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 52))
